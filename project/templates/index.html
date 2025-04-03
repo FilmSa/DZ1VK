@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопросы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <header class="bg-light py-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="h4 mb-0 text-decoration-none">Спроси 509</a>
+            <img src="../static/img/logo.png" width="50" height="50">
+            <form class="d-flex w-50">
+                <input type="text" class="form-control me-2" placeholder="Поиск по вопросам">
+                <button class="btn btn-outline-primary" type="submit">Поиск</button>
+            </form>
+              <div class="d-flex align-items-center ms-3">
+                <img src="../static/img/ava1.png" alt="Аватар" class="rounded-circle" width="60" height="60">
+                <div class="ms-2">
+                    <div class="d-flex flex-column align-items-start">
+                        <span class="text-dark">Филипп Садков</span>
+                        <div>
+                            <a href="/settings" class="btn btn-outline-secondary btn-sm">Настройки</a>
+                            <a href="/logout" class="btn btn-outline-danger btn-sm ms-2">Выход</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mt-4 d-flex">
+        <div class="w-75">
+            <div class="d-flex justify-content-between mb-3">
+                <h2>Новые вопросы</h2>
+                <a href="/ask" class="btn btn-success">Задать вопрос</a>
+            </div>
+            <div class="mb-3">
+                <label for="sort" class="form-label">Сортировка:</label>
+                <select id="sort" class="form-select w-auto d-inline-block">
+                    <option value="date">По дате</option>
+                    <option value="rating">По рейтингу</option>
+                </select>
+            </div>
+            <div class="list-group">
+                 <div class="list-group-item d-flex justify-content-between align-items-start mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="ms-2">
+                            <div class="d-flex flex-column align-items-start">
+                                <img src="../static/img/ava1.png" alt="Аватар" class="rounded-circle me-3" width="40" height="40">
+                                <div class="">
+                                    <a>5</a>
+                                    <i class="bi bi-hand-thumbs-up" style="font-size: 1.2rem; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5><a href="/question/1" class="text-decoration-none text-dark">Как работает Python?</a></h5>
+                            <p class="mb-1">Можете объяснить, как выполняется код на Python?</p>
+                            <div>
+                                <a href="/answ">Ответы(2)</a>
+                                <a>Тэги:</a>
+                                <a href="/tag/Python" class="">Python</a>
+                            </div> 
+                            <small class="text-muted">Филипп Садков | 5 лайков</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-start mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="ms-2">
+                            <div class="d-flex flex-column align-items-start">
+                                <img src="../static/img/ava3.png" alt="Аватар" class="rounded-circle me-3" width="40" height="40">
+                                <div class="">
+                                    <a>8</a>
+                                    <i class="bi bi-hand-thumbs-up" style="font-size: 1.2rem; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5><a href="/question/1" class="text-decoration-none text-dark">Лучшие практики работы с SQL?</a></h5>
+                            <p class="mb-1">Какие существуют лучшие подходы к оптимизации SQL-запросов?</p>
+                            <div>
+                                <a href="/answ">Ответы(3)</a>
+                                <a>Тэги:</a>
+                                <a href="/tag/Python" class="">SQL</a>
+                            </div> 
+                            <small class="text-muted">Константин Беляев | 8 лайков</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-start mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="ms-2">
+                            <div class="d-flex flex-column align-items-start">
+                                <img src="../static/img/ava2.png" alt="Аватар" class="rounded-circle me-3" width="40" height="40">
+                                <div class="">
+                                    <a>12</a>
+                                    <i class="bi bi-hand-thumbs-up" style="font-size: 1.2rem; cursor: pointer;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5><a href="/question/1" class="text-decoration-none text-dark">Что такое REST API?</a></h5>
+                            <p class="mb-1">Как работает REST API и почему он так популярен?</p>
+                            <div>
+                                <a href="/answ">Ответы(3)</a>
+                                <a>Тэги:</a>
+                                <a href="/tag/api" class="">API</a>
+                            </div> 
+                            <small class="text-muted">Иван Захаров | 12 лайков</small>
+                        </div>  
+                    </div>
+                </div>
+                
+
+            </div>
+            <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-start">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">509</a></li>
+            </ul>
+            </nav>
+        </div>
+        <aside class="w-25 ms-4">
+            <div class="card mb-3">
+                <div class="card-header">Популярные тэги</div>
+                <div class="card-body">
+                    
+                    <ul class="list-unstyled">
+                        <li><a href="/tag/python" class="badge bg-light text-decoration-none">Python</a></li>
+                        <li><a href="/tag/sql" class="badge bg-light text-decoration-none">SQL</a></li>
+                        <li><a href="/tag/api" class="badge bg-light text-decoration-none">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Лучшие пользователи</div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2 d-flex align-items-center">
+                            <img src="../static/img/ava3.png" alt="Аватар" class="rounded-circle me-2" width="30" height="30">
+                            <a href="/user/1" class="text-decoration-none">Константин Беляев</a>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <img src="../static/img/ava2.png" alt="Аватар" class="rounded-circle me-2" width="30" height="30">
+                            <a href="/user/2" class="text-decoration-none">Иван Захаров</a>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <img src="../static/img/ava1.png" alt="Аватар" class="rounded-circle me-2" width="30" height="30">
+                            <a href="/user/3" class="text-decoration-none">Филипп Садков</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+    </main>
+    
+    <footer class="bg-light py-3 mt-4 border-top">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Вопросы и ответы. Все права защищены.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
